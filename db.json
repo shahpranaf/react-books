@@ -1,12 +1,16 @@
 {
   "books": [
     {
-      "title": "Harry Puttar Part 1",
+      "title": "Harry Pottar Part 1",
       "id": 1
     },
     {
       "title": "Harry Porter",
       "id": 2
+    },
+    {
+      "title": "The Ghost Stories of Shimla Hills",
+      "id": 3
     }
   ]
 }

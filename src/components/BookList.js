@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import BookShow from './BookShow'
+import { BooksContext } from '../context/books'
 
-function BookList({books, deleteBookById, handleBookEdit}) {
+function BookList() {
+
+    const {books} = useContext(BooksContext);
   return (
     <div className='book-list'>
+       
         { 
             books?.map(book => (
-                <BookShow key={book?.id} book={book} deleteBookById={deleteBookById} handleBookEdit={handleBookEdit}/>
+                <BookShow key={book?.id} book={book} />
             ))
         }
     </div>
