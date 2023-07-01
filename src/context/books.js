@@ -3,20 +3,21 @@ import axios from 'axios';
 
 const BooksContext = createContext();
 
-const BASE_URL = 'http://localhost:3001/books';
+const BASE_URL = `${ process.env.REACT_APP_BASE_URL }`;
+const URL = BASE_URL+'/books';
 
 function BooksProvider ({ children }) {
     const [books, setBooks] = useState([]);
 
     const getBooks = async () => {
-        const response = await axios.get(BASE_URL);
+        const response = await axios.get(URL);
         setBooks(response?.data)
     }
 
     const addBook = async (title) => {
         if (!title || title.trim() === "") return;
 
-        const response = await axios.post(BASE_URL, {
+        const response = await axios.post(URL, {
             title
         });
 
@@ -34,7 +35,7 @@ function BooksProvider ({ children }) {
         //   } 
         //   return book;
         //  })
-        const response = await axios.put(BASE_URL + '/' + id, {
+        const response = await axios.put(URL + '/' + id, {
             title
         });
 
@@ -47,7 +48,7 @@ function BooksProvider ({ children }) {
 
         // const udpatedBooks = books.filter(book => book.id !== id);
 
-        const response = await axios.delete(BASE_URL + '/' + id);
+        const response = await axios.delete(URL + '/' + id);
         // setBooks(udpatedBooks);
         getBooks();
     };
