@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-books/static/css/main.1f59ae86.css",
+    "main.js": "/react-books/static/js/main.78df02da.js",
+    "index.html": "/react-books/index.html",
+    "main.1f59ae86.css.map": "/react-books/static/css/main.1f59ae86.css.map",
+    "main.78df02da.js.map": "/react-books/static/js/main.78df02da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f59ae86.css",
+    "static/js/main.78df02da.js"
+  ]
+}
